@@ -54,5 +54,35 @@ I believe in San Francisco, that variable is called point
 Notice that Chris W Hong, give credit to Chris Metcalf.
 Want to go through his github too.
 
+---
+
+Search and Replace location => point
+Ctrl-H
+
+changed
+  //setup map and add layers
+to data from
+37.760693, -122.418475
+zoom 15
+
+
+change
+ //let Socrata do the sorting:
+  https://data.cityofnewyork.us/NYC-BigApps/NYPD-Motor-Vehicle-Collisions/h9gi-nx95
+  var sodaUrl = "http://data.cityofnewyork.us/resource/h9gi-nx95.json?$where=date%3E%272014-09-01%27%20AND%20zip_code=%2711201%27%20AND%20date%20IS%20NOT%20NULL&$order=date%20ASC";
+
+
+The well first well formed URL that I've got going changed date to opened and is 
+https://data.sfgov.org/resource/gntf-qmc7.json?$select=point,closed,opened,status,case_id,address&$where=opened%3E%272014-09-01%27%20AND%20opened%20IS%20NOT%20NULL&$order=opened%20ASC
+
+Shit-   I want to give up.   I know that I made progress, but I don't have a demonstrateable MVP.
+
+so when I look at this again, describe where I am stuck.
+
+I think that I'm stuck because the SF311 data presents the location as a single column variable with the name "point"
+while I changed name from location to point, I don't think it corrects for the two column vs 1 column.
+
+Gonna push all to github, and get lunch
+
 
 
